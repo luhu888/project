@@ -76,7 +76,7 @@ print json.loads(json_str, object_hook=dict2student)
 '''
 
 
-from multiprocessll import Process
+from multiprocess import Process
 import os
 
 
