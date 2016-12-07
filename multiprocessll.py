@@ -1,10 +1,10 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from multiprocessing import Pool
+from multiprocessing import Pool,Queue,Process
 import os, time, random
 
 
-def long_time_task(name):
+def long_time_task(name):      # 多进程
     print 'Run task %s (%s)...' % (name, os.getpid())
     start = time.time()
     time.sleep(random.random() * 3)
@@ -18,5 +18,120 @@ if __name__ == '__main__':
         p.apply_async(long_time_task, args=(i,))
     print 'Waiting for all subprocesses done...'
     p.close()
-    p.join()
-    print 'All subprocesses done.'
+    p.join()     # 对Pool对象调用join()方法会等待所有子进程执行完毕，调用join()之前必须先调用close()，
+    print 'All subprocesses done.'            # 调用close()之后就不能继续添加新的Process了
+# 请注意输出的结果，task 0，1，2，3是立刻执行的，而task 4要等待前面某个task完成后才执行，这是因为Pool的默认大小在我的电
+# 脑上是4，因此，最多同时执行4个进程。这是Pool有意设计的限制，并不是操作系统的限制
+
+
+def write(q):     # 进程间的通信
+    for value in['A', 'B', 'C']:
+        print 'Put %s to queue...' % value
+        q.put(value)
+        time.sleep(random.random())
+
+
+def read(q):
+    while True:
+        value = q.get(True)
+        print 'Get %s from queue.' % value
+
+if __name__ == '__main__':
+    q = Queue()
+    pw = Process(target=write, args = (q,))
+    pr = Process(target=read, args = (q,))
+    pw.start()
+    pr.start()
+    pw.join()
+    pr.terminate()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
