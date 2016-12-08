@@ -87,7 +87,7 @@ t2.join()
 print balance
 '''
 
-
+'''
 balance = 0
 lock = threading.Lock()
 
@@ -113,13 +113,27 @@ t2.start()
 t1.join()
 t2.join()
 print balance
+'''
 
 
+local_school = threading.local()   # 自动传递参数，使得不同线程共用同一个全局变量，
+                                # 同时也消除了std对象在每层函数中的传递问题
 
 
+def process_student():
+    print 'Hello %s (in %s)' % (local_school.student, threading.current_thread().name)
 
 
+def process_thread(name):
+    local_school.student = name
+    process_student()
 
+t1 = threading.Thread(target=process_thread, args=('Alice',), name='Thread-A')
+t2 = threading.Thread(target=process_thread, args=('LuHu',), name='Thread-B')
+t1.start()
+t2.start()
+t1.join()
+t2.join()
 
 
 
