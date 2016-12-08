@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="64ffa8f2-139b-4482-a618-d0be592696e1" name="Default" comment=" project change2 by luhu&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taskmanager.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taskworker.py" />
+    <list default="true" id="64ffa8f2-139b-4482-a618-d0be592696e1" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/multiprocessll.py" afterPath="$PROJECT_DIR$/multiprocessll.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taskworker.py" afterPath="$PROJECT_DIR$/taskworker.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="project.iws" />
@@ -19,11 +19,11 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/project$multiprocessll.coverage" NAME="multiprocessll Coverage Results" MODIFIED="1481163700543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/project$multiprocessll.coverage" NAME="multiprocessll Coverage Results" MODIFIED="1481186407004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/project$multiprocessing.coverage" NAME="multiprocessing Coverage Results" MODIFIED="1481005453503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/project$taskmanager.coverage" NAME="taskmanager Coverage Results" MODIFIED="1481176489399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/project$taskmanager.coverage" NAME="taskmanager Coverage Results" MODIFIED="1481180264280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/project$example6.coverage" NAME="example6 Coverage Results" MODIFIED="1481006098452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/project$taskworker.coverage" NAME="taskworker Coverage Results" MODIFIED="1481176495504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/project$taskworker.coverage" NAME="taskworker Coverage Results" MODIFIED="1481178670663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="C:\Users\Administrator\PycharmProjects\project" />
@@ -34,23 +34,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="multiprocessll.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="multiprocessll.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/multiprocessll.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.25151515">
+              <caret line="211" column="36" selection-start-line="211" selection-start-column="36" selection-end-line="211" selection-end-column="36" />
               <folding>
-                <element signature="e#42#88#0" expanded="true" />
+                <element signature="e#42#82#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="taskmanager.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="taskmanager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/taskmanager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2590909">
-              <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding>
                 <element signature="e#42#68#0" expanded="true" />
               </folding>
@@ -62,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/taskworker.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+              <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
               <folding>
                 <element signature="e#71#94#0" expanded="true" />
               </folding>
@@ -88,9 +88,9 @@
         <option value="$PROJECT_DIR$/multiprocessing.py" />
         <option value="$PROJECT_DIR$/multiprocess.py" />
         <option value="$PROJECT_DIR$/example6.py" />
-        <option value="$PROJECT_DIR$/multiprocessll.py" />
         <option value="$PROJECT_DIR$/taskworker.py" />
         <option value="$PROJECT_DIR$/taskmanager.py" />
+        <option value="$PROJECT_DIR$/multiprocessll.py" />
       </list>
     </option>
   </component>
@@ -102,7 +102,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="815" />
+    <option name="x" value="911" />
+    <option name="y" value="12" />
     <option name="width" value="755" />
     <option name="height" value="996" />
   </component>
@@ -174,11 +175,11 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="509" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Administrator/PycharmProjects/project/taskworker.py" />
   </component>
-  <component name="RunManager" selected="Python.taskworker">
+  <component name="RunManager" selected="Python.multiprocessll">
     <configuration default="false" name="multiprocessing" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -466,9 +467,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.taskworker" />
+        <item index="0" class="java.lang.String" itemvalue="Python.multiprocessll" />
         <item index="1" class="java.lang.String" itemvalue="Python.taskmanager" />
-        <item index="2" class="java.lang.String" itemvalue="Python.multiprocessll" />
+        <item index="2" class="java.lang.String" itemvalue="Python.taskworker" />
         <item index="3" class="java.lang.String" itemvalue="Python.example6" />
         <item index="4" class="java.lang.String" itemvalue="Python.multiprocessing" />
       </list>
@@ -539,11 +540,23 @@
       <option name="project" value="LOCAL" />
       <updated>1481158823764</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary=" project change3 by LuHu&#10;">
+      <created>1481176629637</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1481176629637</updated>
+    </task>
+    <task id="LOCAL-00011" summary=" project change3 by LuHu&#10;">
+      <created>1481177756803</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1481177756803</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="815" y="0" width="755" height="996" extended-state="0" />
+    <frame x="911" y="12" width="755" height="996" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -553,7 +566,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33026466" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2034682" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947975" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2561151" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -583,7 +596,8 @@
     <MESSAGE value="add new project" />
     <MESSAGE value=" project change by luhu&#10;" />
     <MESSAGE value=" project change2 by luhu&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value=" project change2 by luhu&#10;" />
+    <MESSAGE value=" project change3 by LuHu&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value=" project change3 by LuHu&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -603,7 +617,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#42#88#0" expanded="true" />
+            <element signature="e#42#82#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -613,7 +627,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#42#88#0" expanded="true" />
+            <element signature="e#42#82#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -623,7 +637,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#42#88#0" expanded="true" />
+            <element signature="e#42#82#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -671,16 +685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/multiprocessll.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="23" />
-          <folding>
-            <element signature="e#42#88#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Python27/Lib/pickle.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -700,7 +704,7 @@
     <entry file="file://$PROJECT_DIR$/taskworker.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
           <folding>
             <element signature="e#71#94#0" expanded="true" />
           </folding>
@@ -709,10 +713,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/taskmanager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2590909">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
             <element signature="e#42#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/multiprocessll.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25151515">
+          <caret line="211" column="36" selection-start-line="211" selection-start-column="36" selection-end-line="211" selection-end-column="36" />
+          <folding>
+            <element signature="e#42#82#0" expanded="true" />
           </folding>
         </state>
       </provider>

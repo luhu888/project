@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
+from Tkinter import Frame, Label, Button
 from multiprocessing import Pool,Queue,Process
 import os, time, random, threading
 
@@ -115,7 +116,7 @@ t2.join()
 print balance
 '''
 
-
+'''
 local_school = threading.local()   # 自动传递参数，使得不同线程共用同一个全局变量，
                                 # 同时也消除了std对象在每层函数中的传递问题
 
@@ -134,54 +135,98 @@ t1.start()
 t2.start()
 t1.join()
 t2.join()
+'''
 
 
+'''
+# 正则表达式
+s = 'ABC\\-001'
+print s      # match()方法判断是否匹配，如果匹配成功，返回一个Match对象，否则返回None
+import re
+print re.match(r'^\d{3}\-\d{3,8}$', '010-12345')  # 匹配
+print re.match(r'^\d{3}\-\d{3,8}$', '010 12345')  # 不匹配返回None
+
+test = '001-12545'
+if re.match(r'\d{3}\-\d{3,8}$', test):
+    print '匹配成功'
+else:
+    print '不匹配'
+
+print re.split(r'[\s,;\']+', 'a ,b  \'c;;;   ,, d')   # 正则表达式切分字符
+'''
 
 
+'''
+# 分组
+import re
+h = re.match(r'^(\d{3})-(\d{3,8})$', '010-15423')
+print h.group(0)   # 正则表达式中定义了组，就可以在Match对象上用group()方法提取出子串来。
+print h.group(1)
+print h.group(2)
+print h.groups()
+'''
+
+'''
+[0-9a-zA-Z\_]可以匹配一个数字、字母或者下划线；
+[0-9a-zA-Z\_]+可以匹配至少由一个数字、字母或者下划线组成的字符串，比如'a100'，'0_Z'，'Py3000'等等；
+[a-zA-Z\_][0-9a-zA-Z\_]*可以匹配由字母或下划线开头，后接任意个由一个数字、字母或者下划线组成的字符串，也就是Python合法的变量；
+[a-zA-Z\_][0-9a-zA-Z\_]{0, 19}更精确地限制了变量的长度是1-20个字符（前面1个字符+后面最多19个字符）。
+A|B可以匹配A或B，所以(P|p)ython可以匹配'Python'或者'python'。
+^表示行的开头，^\d表示必须以数字开头。
+$表示行的结束，\d$表示必须以数字结束。
+'''
+
+'''
+import re   # 贪婪匹配，正则匹配默认是贪婪匹配，也就是匹配尽可能多的字符
+print re.match(r'^(\d+?)(0*)$', '102300').groups()
+# 必须让\d+采用非贪婪匹配（也就是尽可能少匹配），才能把后面的0匹配出来，加个?就可以让\d+采用非贪婪匹配
+'''
+
+'''
+from collections import namedtuple
+point = namedtuple('Point', ['x', 'y'])
+p = point(1, 2)
+print p.x
+print p.y
+'''
+
+'''
+class Application(Frame):
+    def __init__(self, master=None):
+        Frame.__init__(self, master)
+        self.pack()
+        self.createWidgets()
+
+    def createWidgets(self):
+        self.helloLabel = Label(self, text='Hello, world!')
+        self.helloLabel.pack()
+        self.quitButton = Button(self, text='Quit', command=self.quit)
+        self.quitButton.pack()
+        '''
+
+from Tkinter import *         # 图形界面
+import tkMessageBox
 
 
+class Application(Frame):
+    def __init__(self, master=None):
+        Frame.__init__(self, master)
+        self.pack()
+        self.createWidgets()
 
+    def createWidgets(self):
+        self.nameInput = Entry(self)
+        self.nameInput.pack()
+        self.alertButton = Button(self, text='Hello', command=self.hello)
+        self.alertButton.pack()
 
+    def hello(self):
+        name = self.nameInput.get() or 'world'
+        tkMessageBox.showinfo('Message', 'Hello, %s' % name)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+app = Application()
+app.master.title('hello python')
+app.mainloop()
 
 
 
