@@ -18,7 +18,8 @@ QueueManager.register('get_result_queue', callable=lambda: result_queue)
 # 端口绑定5000，设置验证码为ABC
 manager = QueueManager(address=('', 5000), authkey='abc')
 # 启动Queue
-manager.start()
+server = manager.get_server()
+server.serve_forever()
 # 获得通过网络访问的Queue对象
 task = manager.get_task_queue()
 result = manager.get_result_queue()
