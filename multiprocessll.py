@@ -1,9 +1,9 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from multiprocessing import Pool,Queue,Process
-import os, time, random
+import os, time, random, threading
 
-
+'''
 def long_time_task(name):      # 多进程
     print 'Run task %s (%s)...' % (name, os.getpid())
     start = time.time()
@@ -38,21 +38,81 @@ def read(q):
 
 if __name__ == '__main__':
     q = Queue()
-    pw = Process(target=write, args = (q,))
-    pr = Process(target=read, args = (q,))
+    pw = Process(target=write, args=(q,))
+    pr = Process(target=read, args=(q,))
     pw.start()
     pr.start()
     pw.join()
     pr.terminate()
+'''
+
+'''
+def loop():      # 多线程，任何进程都会默认开启一个主线程
+    print 'thread %s is running...' % threading.current_thread().name
+    n = 0
+    while n < 5:
+        n = n + 1
+        print 'thread %s >>> %s' % (threading.current_thread().name, n)
+        time.sleep(1)
+print 'thread %s is running...' % threading.current_thread().name
+t = threading.Thread(target=loop, name='LoopThread')  # 创建一个子线程
+t.start()
+t.join()
+print 'thread %s ended.' % threading.current_thread().name
+'''
+
+import time, threading
+'''
+# 假定这是你的银行存款,这样运行会产生负值，
+balance = 0
 
 
+def change_it(n):
+    # 先存后取，结果应该为0:
+    global balance
+    balance = balance + n
+    balance = balance - n
 
 
+def run_thread(n):
+    for i in range(100000):
+        change_it(n)
+
+t1 = threading.Thread(target=run_thread, args=(5,))
+t2 = threading.Thread(target=run_thread, args=(8,))
+t1.start()     # 双线程会抢夺执行权，单个线程中的+n-n运算会中断，会出现两次-n的情况
+t2.start()     # 所以就要引入锁的概念
+t1.join()
+t2.join()
+print balance
+'''
 
 
+balance = 0
+lock = threading.Lock()
 
 
+def run_thread(n):    # 加锁之后就会返回零
+    for i in range(100000):
+        lock.acquire()
+        try:
+            change_it(n)
+        finally:
+            lock.release()
 
+
+def change_it(n):
+    # 先存后取，结果应该为0:
+    global balance     # 全局变量
+    balance = balance + n
+    balance = balance - n
+t1 = threading.Thread(target=run_thread, args=(5,))
+t2 = threading.Thread(target=run_thread, args=(8,))
+t1.start()
+t2.start()
+t1.join()
+t2.join()
+print balance
 
 
 
