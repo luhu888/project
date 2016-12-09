@@ -203,7 +203,7 @@ class Application(Frame):
         self.quitButton = Button(self, text='Quit', command=self.quit)
         self.quitButton.pack()
         '''
-
+'''
 from Tkinter import *         # 图形界面
 import tkMessageBox
 
@@ -227,9 +227,12 @@ class Application(Frame):
 app = Application()
 app.master.title('hello python')
 app.mainloop()
+'''
 
+import urllib2
 
-
+response = urllib2.urlopen("http://www.baidu.com")
+print response.read()
 
 
 
