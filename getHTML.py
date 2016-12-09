@@ -2,16 +2,23 @@
 # -*- coding: UTF-8 -*-
 __author__ = 'Administrator'
 import urllib
-import sys
-reload(sys)
-sys.setdefaultencoding("utf-8")
+import re
 
 
 def getHtml(url):    # 简单的爬取网页的爬虫
-    page = urllib.urlopen(url)
-    html = page.read()
+    page = urllib.urlopen(url)       # urllib.urlopen()方法用于打开一个URL地址。
+    html = page.read()      # read()方法用于读取URL上的数据，向getHtml()函数传递一个网址，并把整个页面下载下来。执行程序就会把整个网页打印输出。
     return html
-gh = getHtml('http://www.jianshu.com/')
-with open('C:\Users\Administrator\PycharmProjects\project\getjpg\\test5.html', 'wb') as f:
-    f.write(gh)
-import shutil
+
+
+def getImage(html):   # 筛选页面中想要的数据
+    reg = r'src="(.+?\.jpg)" '
+    imgre = re.compile(reg)      # re.compile() 可以把正则表达式编译成一个正则表达式对象.
+    imglist = re.findall(imgre, html)    # re.findall() 方法读取html 中包含 imgre（正则表达式）的数据。
+    x = 0     # 将页面筛选的数据保存到本地
+    for imgurl in imglist:
+        urllib.urlretrieve(imgurl, '%s.jpg' % x)    # 这里的核心是用到了urllib.urlretrieve()方法，
+        x += 1                # 直接将远程数据下载到本地。
+    return imglist
+html = getHtml('http://www.tooopen.com/img/87.aspx')
+print getImage(html)

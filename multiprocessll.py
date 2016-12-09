@@ -228,12 +228,8 @@ app = Application()
 app.master.title('hello python')
 app.mainloop()
 '''
-
-import urllib2
-
-response = urllib2.urlopen("http://www.baidu.com")
-print response.read()
-
+import urllib
+print dir(urllib.urlopen)    # 查看模块中的方法
 
 
 
