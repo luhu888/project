@@ -232,7 +232,7 @@ import urllib
 print dir(urllib.urlopen)    # 查看模块中的方法
 
 
-
+help(urllib)
 
 
 
