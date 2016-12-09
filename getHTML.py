@@ -12,13 +12,13 @@ def getHtml(url):    # 简单的爬取网页的爬虫
 
 
 def getImage(html):   # 筛选页面中想要的数据
-    reg = r'src="(.+?\.jpg)" '
+    reg = r'src="(.+?\.png)" '
     imgre = re.compile(reg)      # re.compile() 可以把正则表达式编译成一个正则表达式对象.
     imglist = re.findall(imgre, html)    # re.findall() 方法读取html 中包含 imgre（正则表达式）的数据。
     x = 0     # 将页面筛选的数据保存到本地
     for imgurl in imglist:
-        urllib.urlretrieve(imgurl, '%s.jpg' % x)    # 这里的核心是用到了urllib.urlretrieve()方法，
+        urllib.urlretrieve(imgurl, '%s.png' % x)    # 这里的核心是用到了urllib.urlretrieve()方法，
         x += 1                # 直接将远程数据下载到本地。
     return imglist
-html = getHtml('http://www.tooopen.com/img/87.aspx')
+html = getHtml('http://www.chuiyao.com/manhua/8162/372576.html?p=22')
 print getImage(html)
