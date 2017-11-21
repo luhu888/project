@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="fffa5ab2-589d-4067-86bf-6aecf4efc966" name="pp" url="http://192.168.1.102">
+        <fileTransfer host="192.168.1.102" port="22" rootFolder="/test/nmon" accessType="SFTP" username="dreamgo">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

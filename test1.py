@@ -10,6 +10,4 @@ desired_caps['appActivity'] = '.Calculator'
 
 driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
 
-
-
 driver.quit()

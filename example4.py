@@ -9,7 +9,8 @@ class Student(object):
 
     def __call__(self):
         print('My name is %s.' % self.name)
-Student('LuHu')()
+
+Student('LuHu')
 print callable(Student)
 
 
