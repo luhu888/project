@@ -1,3 +1,3 @@
 # python-Demo
-html,md and python Demo
-Python 随笔
+Python 入门小demo
+
